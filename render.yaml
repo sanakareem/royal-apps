@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: royal-apps
+    env: php
+    buildCommand: composer install
+    startCommand: php artisan serve --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_NAME
+        value: RoyalAppsTest
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: true
+      - key: APP_KEY
+        value: base64:EescE0dbCra5IDJNsbzKg1DhRpEfCNhjGYMqgvBIncY=
+      - key: API_BASE_URL
+        value: https://candidate-testing.api.royal-apps.io/api
