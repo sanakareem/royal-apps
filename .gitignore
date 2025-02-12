@@ -1,0 +1,31 @@
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Laravel specific
+public/storage
+public/hot
+storage/*.key
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+/.vagrant
+.phpunit.result.cache
+
+# Mac specific
+.DS_Store
+
+# IDE specific
+/.idea
+/.vscode
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
