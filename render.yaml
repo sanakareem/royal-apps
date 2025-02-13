@@ -2,10 +2,12 @@ services:
   - type: web
     name: royal-apps
     env: php
-    buildCommand: composer install
+    buildCommand: |
+      composer install
+      mkdir -p database
+      touch database/database.sqlite
     startCommand: |
       php artisan config:cache
-      php artisan route:cache
       php artisan serve --host 0.0.0.0 --port $PORT
     envVars:
       - key: APP_NAME
